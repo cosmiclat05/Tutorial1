@@ -21,10 +21,14 @@ int main(){
     double result = 0;
 
     //uncomment this to add your operation
-    // if (oper == YOUR_OPERATION){
-    //     result = YOUR_FUNCTION(a,b);
-    // }
-    // elif(oper == YOUR_OTHER_OPERATION).........
+    if (oper == multiply)
+    {
+        result = multiply(a,b);
+    }
+    else if(oper == divide)
+    {
+        result = divide(a,b);
+    }
 
 
     std::cout << "Result to your operation:";
