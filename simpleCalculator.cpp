@@ -30,3 +30,17 @@ int main(){
     std::cout << "Result to your operation:";
     std::cout << a << " " << oper << " " << b << " = " << result;
 }
+
+double multiply(double a, double b)
+{
+    return a * b;
+}
+
+double divide(double a, double b)
+{
+    if (b != 0)
+    {
+        return a/b;
+    }
+    
+}
