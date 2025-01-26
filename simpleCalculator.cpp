@@ -8,6 +8,24 @@ double subtract(double a, double b){
     return a-b;
 }
 
+double multiply(double a, double b)
+{
+    return a * b;
+}
+
+double divide(double a, double b)
+{
+    if (b != 0)
+    {
+        return a/b;
+    }  
+    else
+    {
+        std::cout << "Invalid Divisor 0!";
+    }
+}
+
+
 int main(){
     //initializing the numbers and the operator
     double a = 0;
@@ -20,6 +38,8 @@ int main(){
     //Print out current operations here.
     std::cout << "1: Summation: +\n";
     std::cout << "2: Subtract: -\n";
+    std::cout << "3: Multiplication: *\n";
+    std::cout << "4: Division: /\n";
  
 
     std::cout << "Please enter the first numero\n";
@@ -31,15 +51,40 @@ int main(){
 
     double result = 0;
 
-
-    if (oper == "+"){
+    //uncomment this to add your operation
+    if (oper == "*")
+    {
+        result = multiply(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
+    }
+    else if(oper == "/")
+    {
+        result = divide(a,b);
+        if (b != 0)
+        {
+            std::cout << "Result to your operation:";
+            std::cout << a << " " << oper << " " << b << " = " << result;
+        }
+    }
+    else if (oper == "+")
+    {
         result = sum(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
     }
-    else if(oper == "-"){
+    else if(oper == "-")
+    {
         result = subtract(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
+    }
+    else
+    {
+        std::cout << "Invalid Operation!";
     }
 
-    std::cout << "Result to your operation:\n";
-    std::cout << a << " " << oper << " " << b << " = " << result;
-    std::cout << "\n";
+
+
+
 }
