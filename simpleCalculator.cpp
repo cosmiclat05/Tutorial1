@@ -1,5 +1,23 @@
 #include <iostream>
 
+double multiply(double a, double b)
+{
+    return a * b;
+}
+
+double divide(double a, double b)
+{
+    if (b != 0)
+    {
+        return a/b;
+    }  
+    else
+    {
+        std::cout << "Invalid Divisor 0!";
+    }
+}
+
+
 int main(){
     //initializing the numbers and the operator
     double a = 0;
@@ -21,30 +39,26 @@ int main(){
     double result = 0;
 
     //uncomment this to add your operation
-    if (oper == multiply)
+    if (oper == "*")
     {
         result = multiply(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
     }
-    else if(oper == divide)
+    else if(oper == "/")
     {
         result = divide(a,b);
+        if (b != 0)
+        {
+            std::cout << "Result to your operation:";
+            std::cout << a << " " << oper << " " << b << " = " << result;
+        }
     }
-
-
-    std::cout << "Result to your operation:";
-    std::cout << a << " " << oper << " " << b << " = " << result;
-}
-
-double multiply(double a, double b)
-{
-    return a * b;
-}
-
-double divide(double a, double b)
-{
-    if (b != 0)
+    else
     {
-        return a/b;
+        std::cout << "Invalid Operation!";
     }
-    
+
+
+
 }
