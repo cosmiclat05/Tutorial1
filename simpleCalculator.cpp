@@ -67,17 +67,24 @@ int main(){
             std::cout << a << " " << oper << " " << b << " = " << result;
         }
     }
+    else if (oper == "+")
+    {
+        result = sum(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
+    }
+    else if(oper == "-")
+    {
+        result = subtract(a,b);
+        std::cout << "Result to your operation:";
+        std::cout << a << " " << oper << " " << b << " = " << result;
+    }
     else
     {
         std::cout << "Invalid Operation!";
     }
 
 
-    if (oper == "+"){
-        result = sum(a,b);
-    }
-    else if(oper == "-"){
-        result = subtract(a,b);
-    }
+
 
 }
